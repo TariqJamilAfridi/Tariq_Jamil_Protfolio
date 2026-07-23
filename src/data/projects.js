@@ -2,64 +2,36 @@ const projects = [
   {
     id: 1,
     title: "Hospital Management System",
-
     description:
-      "A responsive hospital management system developed using HTML, CSS, JavaScript and Python.",
-
-    image: "/projects/hospital.png",
-
-    technologies: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Python"
-    ],
-
-    github: "https://github.com/yourusername",
-
-    demo: "https://your-demo.com"
+      "A comprehensive hospital management system with patient records, appointment scheduling, and staff management built with modern web technologies.",
+    gradient: "from-emerald-600 to-teal-800",
+    icon: "🏥",
+    technologies: ["HTML", "CSS", "JavaScript", "Python"],
+    github: "https://github.com/TariqJamilAfridi",
+    demo: "https://github.com/TariqJamilAfridi",
   },
-
   {
     id: 2,
-
     title: "E-Commerce Website",
-
     description:
-      "Modern shopping website with responsive design and interactive UI.",
-
-    image: "/projects/ecommerce.png",
-
-    technologies: [
-      "React",
-      "Tailwind CSS",
-      "JavaScript"
-    ],
-
-    github: "https://github.com/yourusername",
-
-    demo: "https://your-demo.com"
+      "Modern shopping platform with responsive design, product catalog, cart functionality and an interactive user interface.",
+    gradient: "from-violet-600 to-purple-800",
+    icon: "🛒",
+    technologies: ["React", "Tailwind CSS", "JavaScript"],
+    github: "https://github.com/TariqJamilAfridi",
+    demo: "https://github.com/TariqJamilAfridi",
   },
-
   {
     id: 3,
-
     title: "Portfolio Website",
-
     description:
-      "Personal portfolio built using React and Tailwind CSS.",
-
-    image: "/projects/portfolio.png",
-
-    technologies: [
-      "React",
-      "Tailwind CSS"
-    ],
-
-    github: "https://github.com/yourusername",
-
-    demo: "https://your-demo.com"
-  }
+      "Personal developer portfolio showcasing projects, skills and contact information with smooth animations and modern design.",
+    gradient: "from-blue-600 to-indigo-800",
+    icon: "💼",
+    technologies: ["React", "Tailwind CSS", "Framer Motion"],
+    github: "https://github.com/TariqJamilAfridi",
+    demo: "https://github.com/TariqJamilAfridi",
+  },
 ];
 
 export default projects;
