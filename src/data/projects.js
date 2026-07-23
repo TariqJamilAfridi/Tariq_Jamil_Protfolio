@@ -9,6 +9,7 @@ const projects = [
     technologies: ["HTML", "CSS", "JavaScript", "Python"],
     github: "https://github.com/TariqJamilAfridi",
     demo: "https://github.com/TariqJamilAfridi",
+    featured: true, // ← renders full-width at top of grid
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const projects = [
     technologies: ["React", "Tailwind CSS", "JavaScript"],
     github: "https://github.com/TariqJamilAfridi",
     demo: "https://github.com/TariqJamilAfridi",
+    featured: false,
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ const projects = [
     technologies: ["React", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/TariqJamilAfridi",
     demo: "https://github.com/TariqJamilAfridi",
+    featured: false,
   },
 ];
 

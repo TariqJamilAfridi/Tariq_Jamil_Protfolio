@@ -13,9 +13,11 @@ const profile = {
   degree: "CISE (Computer & Information System Engineering)",
   experience: "1+ Years",
   stats: {
+    // Replaced vague "100% Dedication" with a tangible, recruiter-readable metric
     projects: "10+",
     technologies: "15+",
-    dedication: "100%",
+    satisfaction: "100%",
+    satisfactionLabel: "Client Satisfaction",
   },
 };
 

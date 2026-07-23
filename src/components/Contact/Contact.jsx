@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaPhone, FaGithub, FaLinkedin } from "react-icons/fa";
+import { HiCheckBadge } from "react-icons/hi2";
 import profile from "../../data/profile";
 import Button from "../common/Button/Button";
 import SectionTitle from "../common/SectionTitle/SectionTitle";
@@ -11,6 +12,13 @@ import {
   staggerContainer,
   defaultViewport,
 } from "../../utils/animations";
+
+// Social proof badges shown above the form
+const socialProof = [
+  { icon: FaGithub,   label: "GitHub",   sub: "Open Source",      href: profile.github },
+  { icon: FaLinkedin, label: "LinkedIn", sub: "Connect with me",   href: profile.linkedin },
+  { icon: HiCheckBadge, label: "Available", sub: "For hire now",   href: null, highlight: true },
+];
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -57,9 +65,49 @@ function Contact() {
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <SectionTitle
+          eyebrow="05. Contact"
           title="Contact Me"
           subtitle="Have a project in mind or want to connect? Let's talk!"
         />
+
+        {/* ── Social proof strip ─────────────────────────────────────────── */}
+        <motion.div
+          className="flex flex-wrap justify-center gap-4 mb-12"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={defaultViewport}
+        >
+          {socialProof.map(({ icon: Icon, label, sub, href, highlight }) => {
+            const Tag = href ? "a" : "div";
+            return (
+              <motion.div key={label} variants={fadeInUp}>
+                <Tag
+                  href={href ?? undefined}
+                  target={href ? "_blank" : undefined}
+                  rel={href ? "noreferrer" : undefined}
+                  className={`flex items-center gap-3 px-5 py-3 rounded-xl border
+                             transition-all duration-300 cursor-default
+                             ${highlight
+                               ? "border-emerald-500/30 bg-emerald-500/10 hover:border-emerald-400/60"
+                               : "border-slate-700 bg-slate-900/60 hover:border-blue-500/40"
+                             } ${href ? "cursor-pointer" : ""}`}
+                >
+                  <Icon
+                    size={20}
+                    className={highlight ? "text-emerald-400" : "text-slate-400"}
+                  />
+                  <div>
+                    <p className={`text-sm font-semibold ${highlight ? "text-emerald-400" : "text-white"}`}>
+                      {label}
+                    </p>
+                    <p className="text-xs text-slate-500">{sub}</p>
+                  </div>
+                </Tag>
+              </motion.div>
+            );
+          })}
+        </motion.div>
 
         <div className="grid md:grid-cols-5 gap-12">
           <motion.div
@@ -176,7 +224,9 @@ function Contact() {
               <motion.div variants={fadeInUp}>
                 <Button
                   type="submit"
-                  className="bg-blue-600 text-white hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5 w-full sm:w-auto"
+                  variant="primary"
+                  size="lg"
+                  className="w-full sm:w-auto"
                 >
                   Send Message
                 </Button>
