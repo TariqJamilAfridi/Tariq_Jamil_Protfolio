@@ -4,19 +4,25 @@ const ThemeContext = createContext({ theme: "dark", toggleTheme: () => {} });
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
-    // Persist preference in localStorage
     return localStorage.getItem("portfolio-theme") || "dark";
   });
 
   useEffect(() => {
     const root = document.documentElement;
-    if (theme === "light") {
-      root.classList.add("light-mode");
+    // Tailwind v4 uses `dark` class on <html> for dark: variant
+    if (theme === "dark") {
+      root.classList.add("dark");
     } else {
-      root.classList.remove("light-mode");
+      root.classList.remove("dark");
     }
     localStorage.setItem("portfolio-theme", theme);
   }, [theme]);
+
+  // Apply dark class on first render (before React hydrates)
+  useEffect(() => {
+    const stored = localStorage.getItem("portfolio-theme") || "dark";
+    if (stored === "dark") document.documentElement.classList.add("dark");
+  }, []);
 
   function toggleTheme() {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));

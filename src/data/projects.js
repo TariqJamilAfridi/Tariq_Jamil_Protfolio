@@ -1,38 +1,42 @@
+import inotebookImage from "../assets/images/iNotebook.png";
+import newsbeats from "../assets/images/newsbeats.png";
+import textUtils from "../assets/images/text_utils.png";
+
 const projects = [
   {
     id: 1,
-    title: "Hospital Management System",
+    title: "iNotebook Cloud",
     description:
-      "A comprehensive hospital management system with patient records, appointment scheduling, and staff management built with modern web technologies.",
+      "A cloud notebook where users create a free account and privately add, edit, search, and delete notes — including voice input — with data stored securely in MongoDB.",
     gradient: "from-emerald-600 to-teal-800",
-    icon: "🏥",
-    technologies: ["HTML", "CSS", "JavaScript", "Python"],
-    github: "https://github.com/TariqJamilAfridi",
-    demo: "https://github.com/TariqJamilAfridi",
-    featured: true, // ← renders full-width at top of grid
+    image: inotebookImage,
+    technologies: ["React", "Node.js", "MongoDB", "Bootstrap", "Express"],
+    github: "https://github.com/TariqJamilAfridi/iNotebook",
+    demo: "https://takeyournoteininotebook.vercel.app/login",
+    featured: true,
   },
   {
     id: 2,
-    title: "E-Commerce Website",
+    title: "News Beats",
     description:
-      "Modern shopping platform with responsive design, product catalog, cart functionality and an interactive user interface.",
+      "A live news reader that pulls daily headlines by category — Business, Sports, Entertainment, Health, Science, and Technology — with a search bar for quick lookup.",
     gradient: "from-violet-600 to-purple-800",
-    icon: "🛒",
-    technologies: ["React", "Tailwind CSS", "JavaScript"],
-    github: "https://github.com/TariqJamilAfridi",
-    demo: "https://github.com/TariqJamilAfridi",
+    image: newsbeats,
+    technologies: ["React", "JavaScript", "Bootstrap", "Vite"],
+    github: "https://github.com/TariqJamilAfridi/News_Website",
+    demo: "https://news-beats-website.vercel.app/",
     featured: false,
   },
   {
     id: 3,
-    title: "Portfolio Website",
+    title: "Text Utils",
     description:
-      "Personal developer portfolio showcasing projects, skills and contact information with smooth animations and modern design.",
+      "A text toolbox for case conversion, copy, download, reverse, extra-space cleanup, find-and-replace, plus word, character, and reading-time counts.",
     gradient: "from-blue-600 to-indigo-800",
-    icon: "💼",
-    technologies: ["React", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/TariqJamilAfridi",
-    demo: "https://github.com/TariqJamilAfridi",
+    image: textUtils,
+    technologies: ["React", "JavaScript", "Bootstrap"],
+    github: "https://github.com/TariqJamilAfridi/Text_Utility_Tool",
+    demo: "https://textutilitytoolforenglishstandard.vercel.app/",
     featured: false,
   },
 ];

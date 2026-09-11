@@ -1,21 +1,20 @@
 const profile = {
   name: "Tariq Jamil",
-  title: "Computer & Information System Engineering",
+  title: "Computer & Information System Engineer",
   role: "Full Stack Developer",
   description:
-    "I build modern, responsive and scalable web applications using React, JavaScript, Tailwind CSS and Python. Passionate about creating clean UI, optimized performance and excellent user experience.",
+    "I build responsive, scalable web apps with React, Node.js, and Python — with extra focus on clean UI, MongoDB/SQL data layers, and practical AI and computer-vision work.",
   about:
-    "I am a Final Year Computer & Information System Engineering student with a passion for creating modern, responsive and user-friendly web applications. I specialize in React, JavaScript, Tailwind CSS and Python, with hands-on experience building full-stack projects from concept to deployment.",
+    "I am a Computer & Information System Engineering graduate who enjoys shipping modern, user-friendly products. I work across React, JavaScript, Bootstrap, Node.js, MongoDB, SQL, and Python, and I take projects from idea through deployment.",
   github: "https://github.com/TariqJamilAfridi",
   linkedin: "https://www.linkedin.com/in/tariq-jamil-afridi/",
-  email: "tariq347146@gmail.com",
+  email: "jamil4599991@gmail.com",
   location: "Pakistan",
-  degree: "CISE (Computer & Information System Engineering)",
+  degree: "BE — Computer & Information System Engineering",
   experience: "1+ Years",
   stats: {
-    // Replaced vague "100% Dedication" with a tangible, recruiter-readable metric
-    projects: "10+",
-    technologies: "15+",
+    projects: "5+",
+    technologies: "14+",
     satisfaction: "100%",
     satisfactionLabel: "Client Satisfaction",
   },

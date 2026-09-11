@@ -1,0 +1,70 @@
+╔════════════════════════════════════════════════════════════════╗
+║              📧 EmailJS Quick Setup (10 minutes)              ║
+╚════════════════════════════════════════════════════════════════╝
+
+🔗 STEP 1: Sign Up
+   → Go to: https://www.emailjs.com/
+   → Click "Sign Up" (use Google for fastest setup)
+
+📧 STEP 2: Connect Email Service
+   → Left sidebar: "Email Services"
+   → Click "Add New Service"
+   → Choose "Gmail" (or your email provider)
+   → Click "Connect Account" → Sign in → Allow permissions
+   → COPY your Service ID (looks like: service_abc1234)
+
+📝 STEP 3: Create Template
+   → Left sidebar: "Email Templates"
+   → Click "Create New Template"
+   → Use this template:
+
+   ┌─────────────────────────────────────────────────────┐
+   │ Subject: New Contact Form Submission: {{subject}}  │
+   │                                                     │
+   │ Body:                                               │
+   │ From: {{from_name}}                                 │
+   │ Email: {{from_email}}                               │
+   │ Subject: {{subject}}                                │
+   │                                                     │
+   │ Message:                                            │
+   │ {{message}}                                         │
+   │                                                     │
+   │ Reply to: {{from_email}}                            │
+   └─────────────────────────────────────────────────────┘
+
+   → Click "Save"
+   → COPY your Template ID (looks like: template_xyz5678)
+
+🔑 STEP 4: Get Public Key
+   → Top right: Profile icon → "Account"
+   → Go to "General" tab
+   → COPY your Public Key (looks like: abcDEF123xyz)
+
+⚙️  STEP 5: Configure Portfolio
+   → Open .env file in your project root
+   → Replace with your actual values:
+
+   VITE_EMAILJS_PUBLIC_KEY=abcDEF123xyz
+   VITE_EMAILJS_SERVICE_ID=service_abc1234
+   VITE_EMAILJS_TEMPLATE_ID=template_xyz5678
+
+   → SAVE file
+   → RESTART dev server (npm run dev)
+
+✅ STEP 6: Test
+   → Go to Contact section on your portfolio
+   → Fill out form with your email
+   → Click "Send Message"
+   → Check your inbox (might be in spam first time)
+
+╔════════════════════════════════════════════════════════════════╗
+║  ✅ Done! Messages now go directly to your email inbox!       ║
+╚════════════════════════════════════════════════════════════════╝
+
+📊 Free Tier: 200 emails/month (perfect for portfolio!)
+
+🔒 Security: .env is in .gitignore (never committed to GitHub)
+
+🚀 Deployment: Add same 3 variables to Vercel/Netlify env settings
+
+Need help? See EMAILJS_SETUP_GUIDE.md for detailed instructions

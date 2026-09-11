@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
+
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
@@ -12,6 +13,7 @@ import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/common/ScrollToTop/ScrollToTop";
 import CursorSpotlight from "./components/common/CursorSpotlight/CursorSpotlight";
 import Preloader from "./components/common/Preloader/Preloader";
+import AIChatbot from "./components/AIChatbot/AIChatbot";
 
 // Section fade-up transition variant
 const sectionVariant = {
@@ -51,7 +53,7 @@ function App() {
       {/* ── Cursor spotlight (desktop only) ─────────────────────────────── */}
       <CursorSpotlight />
 
-      <div className="font-[Inter,system-ui,sans-serif] antialiased overflow-x-hidden">
+      <div className="font-[Inter,system-ui,sans-serif] antialiased">
         <Navbar />
 
         <main id="main-content">
@@ -68,6 +70,7 @@ function App() {
 
         <Footer />
         <ScrollToTop />
+        <AIChatbot />
       </div>
     </>
   );
