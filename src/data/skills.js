@@ -22,6 +22,14 @@ const skills = {
     { name: "Machine Learning", icon: "scikitlearn", level: 8  },
     { name: "AI / Deep Learning", icon: "ai",        level: 8  },
   ],
+  aitools: [
+    { name: "ChatGPT",       icon: "chatgpt",  level: 10 },
+    { name: "Claude AI",     icon: "claude",   level: 9  },
+    { name: "Cursor AI",     icon: "cursor",   level: 9  },
+    { name: "Gemini",        icon: "gemini",   level: 9  },
+    { name: "Kiro",          icon: "kiro",     level: 9  },
+    { name: "GitHub Copilot", icon: "copilot", level: 9  },
+  ],
 };
 
 export default skills;

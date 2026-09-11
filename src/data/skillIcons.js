@@ -12,8 +12,13 @@ import {
   SiPostgresql,
   SiOpencv,
   SiScikitlearn,
+  SiGithubcopilot,
+  SiClaude,
+  SiChatbot,
+  SiGooglegemini,
 } from "react-icons/si";
-import { FaBrain } from "react-icons/fa";
+import { FaBrain, FaRobot } from "react-icons/fa";
+import { TbSparkles } from "react-icons/tb";
 
 const skillIcons = {
   html5:        { icon: SiHtml5,       color: "#E34F26" },
@@ -30,6 +35,13 @@ const skillIcons = {
   opencv:       { icon: SiOpencv,      color: "#5C3EE8" },
   scikitlearn:  { icon: SiScikitlearn, color: "#F7931E" },
   ai:           { icon: FaBrain,       color: "#EC4899" },
+  // AI Tools
+  chatgpt:      { icon: SiChatbot,        color: "#10A37F" },
+  cursor:       { icon: FaRobot,          color: "#000000" },
+  claude:       { icon: SiClaude,         color: "#D97757" },
+  kiro:         { icon: TbSparkles,       color: "#8B5CF6" },
+  gemini:       { icon: SiGooglegemini,   color: "#4285F4" },
+  copilot:      { icon: SiGithubcopilot,  color: "#000000" },
 };
 
 export default skillIcons;

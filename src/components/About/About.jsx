@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { HiArrowDownTray } from "react-icons/hi2";
+import { HiArrowDownTray, HiEye } from "react-icons/hi2";
 
 import profileImage from "../../assets/images/Profile.jpeg";
 import CV from "../../assets/resume/CV.pdf";
@@ -112,8 +112,8 @@ function About() {
             </motion.div>
 
             <motion.div variants={fadeInUp} className="mt-6">
-              <Button as="a" href={CV} download variant="ghost" size="md">
-                <HiArrowDownTray size={15} /> Download CV
+              <Button as="a" href={CV} target="_blank" rel="noopener noreferrer" variant="ghost" size="md">
+                <HiEye size={15} /> View Resume
               </Button>
             </motion.div>
           </motion.div>

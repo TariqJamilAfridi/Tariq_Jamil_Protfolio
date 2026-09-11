@@ -17,6 +17,9 @@ const skillCategories = [
   { key: "aiml",     title: "AI & ML",     accent: "text-purple-600 dark:text-purple-400",
     dot: "bg-purple-500", cardBorder: "border-purple-200 dark:border-purple-500/20 hover:border-purple-400 dark:hover:border-purple-500/50",
     cardBg: "bg-purple-50/50 dark:bg-purple-500/5", barFrom: "from-purple-500", barTo: "to-fuchsia-400" },
+  { key: "aitools",  title: "AI Tools",    accent: "text-pink-600 dark:text-pink-400",
+    dot: "bg-pink-500", cardBorder: "border-pink-200 dark:border-pink-500/20 hover:border-pink-400 dark:hover:border-pink-500/50",
+    cardBg: "bg-pink-50/50 dark:bg-pink-500/5", barFrom: "from-pink-500", barTo: "to-rose-400" },
 ];
 
 function SkillIcon({ iconKey }) {

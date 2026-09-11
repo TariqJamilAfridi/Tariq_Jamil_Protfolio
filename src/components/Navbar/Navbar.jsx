@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+import { HiOutlineMenu, HiOutlineX, HiEye } from "react-icons/hi";
 import { HiArrowDownTray } from "react-icons/hi2";
 
 import navigation from "../../data/navigation";
@@ -109,8 +109,8 @@ function Navbar() {
         {/* Desktop right actions */}
         <div className="hidden md:flex items-center gap-2.5">
           <ThemeToggle />
-          <Button as="a" href={CV} download variant="ghost" size="sm">
-            <HiArrowDownTray size={14} /> Resume
+          <Button as="a" href={CV} target="_blank" rel="noopener noreferrer" variant="ghost" size="sm">
+            <HiEye size={14} /> Resume
           </Button>
         </div>
 
@@ -159,9 +159,9 @@ function Navbar() {
               })}
               <motion.div initial={{ opacity: 0, x: -14 }} animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: navigation.length * 0.04 }} className="pt-2">
-                <Button as="a" href={CV} download variant="ghost" className="w-full"
+                <Button as="a" href={CV} target="_blank" rel="noopener noreferrer" variant="ghost" className="w-full"
                   onClick={() => setMenuOpen(false)}>
-                  <HiArrowDownTray size={14} /> Download Resume
+                  <HiEye size={14} /> View Resume
                 </Button>
               </motion.div>
             </nav>

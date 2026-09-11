@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import { HiArrowDownTray } from "react-icons/hi2";
+import { HiArrowDownTray, HiEye } from "react-icons/hi2";
 import { TypeAnimation } from "react-type-animation";
 
 import profile from "../../data/profile";
@@ -108,8 +108,8 @@ function Hero() {
               <Button as="a" href="#contact" variant="primary" size="md" onClick={scrollToContact}>
                 Hire Me
               </Button>
-              <Button as="a" href={CV} download variant="ghost" size="md">
-                <HiArrowDownTray size={15} /> Download Resume
+              <Button as="a" href={CV} target="_blank" rel="noopener noreferrer" variant="ghost" size="md">
+                <HiEye size={15} /> View Resume
               </Button>
             </motion.div>
 
